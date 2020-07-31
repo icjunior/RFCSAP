@@ -49,6 +49,7 @@ public class SAPService {
 			System.out.println("Retorno do processamento: " + retorno);
 
 		} catch (JCoException e) {
+			e.printStackTrace();
 			throw new RuntimeException("Problemas ao conectar no sistema SAP " + e.getMessageText());
 		}
 	}
