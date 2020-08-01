@@ -7,7 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class ZanM04PK implements Serializable{
+public class ZanM04PK implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -19,6 +19,9 @@ public class ZanM04PK implements Serializable{
 
 	@Column(name = "m00ac")
 	private Integer m00ac;
+
+	@Column(name = "m00ad")
+	private Integer m00ad;
 
 	public LocalDateTime getM00af() {
 		return m00af;
@@ -44,11 +47,20 @@ public class ZanM04PK implements Serializable{
 		this.m00ac = m00ac;
 	}
 
+	public Integer getM00ad() {
+		return m00ad;
+	}
+
+	public void setM00ad(Integer m00ad) {
+		this.m00ad = m00ad;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((m00ac == null) ? 0 : m00ac.hashCode());
+		result = prime * result + ((m00ad == null) ? 0 : m00ad.hashCode());
 		result = prime * result + ((m00af == null) ? 0 : m00af.hashCode());
 		result = prime * result + ((m00za == null) ? 0 : m00za.hashCode());
 		return result;
@@ -67,6 +79,11 @@ public class ZanM04PK implements Serializable{
 			if (other.m00ac != null)
 				return false;
 		} else if (!m00ac.equals(other.m00ac))
+			return false;
+		if (m00ad == null) {
+			if (other.m00ad != null)
+				return false;
+		} else if (!m00ad.equals(other.m00ad))
 			return false;
 		if (m00af == null) {
 			if (other.m00af != null)

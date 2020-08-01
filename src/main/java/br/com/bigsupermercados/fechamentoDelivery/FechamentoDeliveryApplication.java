@@ -21,8 +21,8 @@ public class FechamentoDeliveryApplication {
 	@Bean
 	public CommandLineRunner dados(FechamentoService fechamentoService) {
 		return (args) -> {
-			LocalDateTime data = LocalDateTime.of(LocalDate.now(), LocalTime.of(0, 0));
-			fechamentoService.gravar(data);					
+			LocalDateTime data = LocalDateTime.of(LocalDate.now().minusDays(1L), LocalTime.of(0, 0));
+			fechamentoService.gravar(data);
 		};
 	}
 }

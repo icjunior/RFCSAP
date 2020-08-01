@@ -26,6 +26,18 @@ public class ZanM04 {
 	@Column(name = "m04ak")
 	private BigDecimal m04ak;
 
+	public ZanM04() {
+	}
+
+	public ZanM04(ZanM04PK id, Integer m04ae, Integer m04ah, Integer m04ai, BigDecimal m04ak) {
+		super();
+		this.id = id;
+		this.m04ae = m04ae;
+		this.m04ah = m04ah;
+		this.m04ai = m04ai;
+		this.m04ak = m04ak;
+	}
+
 	public Integer getM04ae() {
 		return m04ae;
 	}
@@ -89,6 +101,11 @@ public class ZanM04 {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Valor: " + m04ak;
 	}
 
 }

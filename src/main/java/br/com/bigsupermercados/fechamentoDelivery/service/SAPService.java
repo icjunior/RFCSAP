@@ -23,7 +23,7 @@ public class SAPService {
 			destination = JCoDestinationManager.getDestination(Destination.SomeSampleDestinations.ABAP_AS1);
 			destination.ping();
 			JCoFunction function = destination.getRepository().getFunction("Z_VALOR_OPERADOR");
-			
+
 			if (function == null) {
 				throw new RuntimeException("Z_VALOR_OPERADOR not found in SAP.");
 			}

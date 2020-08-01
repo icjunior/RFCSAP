@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Arquivos ###
+./src/main/resources/application.properties
+.ABAP_AS1.jcoDestination
