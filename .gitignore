@@ -33,5 +33,6 @@ build/
 .vscode/
 
 ### Arquivos ###
-./src/main/resources/application.properties
-.ABAP_AS1.jcoDestination
+src/main/resources/application.properties
+ABAP_AS1.jcoDestination
+teste.txt
