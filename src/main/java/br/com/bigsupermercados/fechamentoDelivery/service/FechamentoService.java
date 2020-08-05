@@ -19,7 +19,8 @@ public class FechamentoService {
 	private SAPService sap;
 
 	public void gravar(LocalDateTime data) {
-		List<ZanM04> fechamentos = repository.findById_M00afAndM04aiAndM04aeNot(data, 4, 158);
+		List<ZanM04> fechamentos = repository.findById_M00afAndM04aiAndM04aeNotOrderByM04akAsc(data, 4, 158);
+		System.out.println(fechamentos);
 		sap.gravar(fechamentos);
 	}
 }
